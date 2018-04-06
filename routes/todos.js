@@ -1,16 +1,18 @@
+"use strict";
+
 const express = require("express");
 const router = express.Router();
-const helpers = require("../helpers");
+const controllers = require("../controllers");
 
-router.get("/", helpers.getTodos);
+router.get("/", controllers.getTodos);
 
-router.post("/", helpers.postTodos);
+router.post("/", controllers.postTodos);
 
 
-router.get("/:id", helpers.getSingleTodos);
+router.get("/:id", controllers.getSingleTodos);
 
-router.put("/:id", helpers.putTodos);
+router.put("/:id", controllers.putTodos);
 
-router.delete("/:id", helpers.deleteTodos);
+router.delete("/:id", controllers.deleteTodos);
 
 module.exports = router;

@@ -1,7 +1,10 @@
+"use strict"
+
 const express = require("express"),
       morgan = require("morgan"),
       bodyParser = require("body-parser"),
-      routes = require("./routes/todos");
+      routes = require("./routes/todos"),
+      path = require("path");
       
 
 
@@ -10,10 +13,11 @@ var app = express();
 app.use(morgan("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
+app.use(express.static(path.join(__dirname)+"/views"));
 
 
 app.get("/", function (req, res) {
-    res.send("the root path");
+    res.sendFile("index.hmtl");
 });
 
 
