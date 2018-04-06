@@ -2,8 +2,8 @@ This is todo's rest api. This api is created with node js and express js.
 
 Usage:
 
-	get     /api/todos			get all todos
-	post    /api/todos			post new a todo
+	get     /api/todos		get all todos
+	post    /api/todos		post new a todo
 	get     /api/todos/:id 		get a single todo
 	put     /api/todos/:id 		update a single todo
 	delete  /api/todos/:id 		delete a single todo
